@@ -1,0 +1,91 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Container que alinha o texto na metade direita */
+.contentContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-start; /* Coloca o texto no lado direito */
+  pointer-events: none;      /* Permite que o mouse interaja com o 3D por trás */
+}
+
+/* Coluna de texto */
+.textCol {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: auto;      /* Permite selecionar texto e clicar em botões */
+}
+
+.role {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.nameHome {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--foreground-color);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1.125rem;
+  color: #555;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.circularTextWrapper {
+  margin-top: 1.5rem;
+}
+
+.heroCircularText {
+  margin: 0;
+}
+
+/* Responsividade: No mobile centraliza o texto */
+@media (max-width: 768px) {
+  .heroSection {
+    justify-content: center;
+  }
+
+  .contentContainer {
+    justify-content: center;
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .textCol {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nameHome {
+    font-size: 3rem;
+  }
+
+  .circularTextWrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

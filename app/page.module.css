@@ -1,0 +1,12 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: 
+    linear-gradient(rgba(18, 18, 18, 0.05) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(18, 18, 18, 0.05) 1px, transparent 1px),
+    radial-gradient(circle, transparent 0%, rgba(18, 18, 18, 0.02) 100%);
+  background-size: 56px 56px, 56px 56px, 100% 100%;
+  position: relative;
+  color: #1c1917;
+}

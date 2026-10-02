@@ -1,0 +1,52 @@
+.infiniteSpiral {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: visible; /* Não corta os cards no topo e na base */
+  isolation: isolate;
+}
+
+
+.stage {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: var(--infinite-spiral-card-width);
+  height: var(--infinite-spiral-card-height);
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.15);
+  border-radius: var(--infinite-spiral-card-radius);
+  background: rgb(255 255 255 / 0.08);
+  box-shadow: 0 14px 38px rgb(8 6 18 / 0.3);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+  text-decoration: none;
+  transform: translateZ(0); /* Força camada de alta fidelidade na GPU */
+}
+.image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: top center; /* Foca no topo da página capturada */
+  user-select: none;
+  image-rendering: -webkit-optimize-contrast; /* Melhora o contraste e nitidez */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
+}
+

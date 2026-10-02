@@ -1,0 +1,99 @@
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: 
+    linear-gradient(rgba(18, 18, 18, 0.05) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(18, 18, 18, 0.05) 1px, transparent 1px),
+    radial-gradient(circle, transparent 0%, rgba(18, 18, 18, 0.02) 100%);
+  background-size: 56px 56px, 56px 56px, 100% 100%;
+  color: #1c1917;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.aboutContainer {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.aboutLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutCenter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.rotatingTextMain {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.25rem;
+  background: #18181b;
+  color: #f4f4f5;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rotatingTextMain:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.rotatingTextSplit {
+  overflow: hidden;
+  display: inline-flex;
+  padding-bottom: 2px;
+}
+
+.rotatingTextElement {
+  display: inline-block;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.aboutRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .aboutCenter,
+  .aboutRight,
+  .aboutLeft {
+    align-items: center;
+    width: 100%;
+  }
+}
