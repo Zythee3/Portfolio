@@ -91,8 +91,9 @@ export default function About() {
 
                 {/* Divisão do Meio */}
                 <div className={styles.aboutCenter}>
+                    <h1 className={styles.nameCenter}>Construindo</h1>
                     <RotatingText
-                        texts={['React', 'Bits', 'Is', 'Cool!']}
+                        texts={['Ideias', 'Soluções', 'Projetos', 'Aplicações']}
                         mainClassName={styles.rotatingTextMain}
                         staggerFrom="last"
                         initial={{ y: "100%" }}

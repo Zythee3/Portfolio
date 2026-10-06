@@ -16,6 +16,15 @@
   box-sizing: border-box;
 }
 
+.nameCenter{
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--foreground-color);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
 .aboutContainer {
   width: 100%;
   max-width: 1400px;
@@ -33,9 +42,11 @@
 
 .aboutCenter {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1.5rem;
   align-items: center;
+  max-width: 800px;
+  min-width: 800px;
   justify-content: center;
   text-align: center;
 }
@@ -44,12 +55,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.45rem 1.25rem;
-  background: #18181b;
-  color: #f4f4f5;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 9999px;
-  font-size: 1.125rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--foreground-color);
+  border-radius: 15px;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   overflow: hidden;
@@ -73,7 +82,7 @@
 .rotatingTextElement {
   display: inline-block;
   font-weight: 700;
-  color: #38bdf8;
+  color: var(--background-color);
 }
 
 .aboutRight {
