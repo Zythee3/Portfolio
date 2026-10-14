@@ -4,6 +4,9 @@ import FolderFloat from "@/components/widgets/folder-float/folder-float";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa6';
 import TearTicket from "@/components/widgets/tear-ticket/tear-ticket";
 import RotatingText from '@/components/ui/rotating-text/rotating-text';
+import MacTerminal from "@/components/widgets/mac-terminal/mac-terminal";
+import BoardItem from "@/components/layout/boardItem/boardItem";
+import LottieAnimation from "@/components/widgets/lottie/lottie";
 
 export default function About() {
 
@@ -38,10 +41,11 @@ export default function About() {
         <section id="about" className={styles.about}>
 
             <div className={styles.aboutContainer}>
-                {/* Divisão Esquerda */}
-                <div className={styles.aboutLeft}>
+
+                <BoardItem x={10} y={22} rotate={-3} z={2}>
                     <TearTicket
                         image="https://i0.wp.com/www.latitudeinfinita.com/wp-content/uploads/2019/11/O-que-fazer-em-Xangai-33-1-e1577285984230.jpg?fit=1200%2C674&ssl=1"
+
                         imageAlt="Espaço de exibição"
                         stub={
                             <div style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'space-between', padding: '16px' }}>
@@ -87,32 +91,33 @@ export default function About() {
                             <span style={{ fontSize: '0.8rem', color: '#a1a1aa' }}>Guest Edition</span>
                         </div>
                     </TearTicket>
-                </div>
+                </BoardItem>
 
-                {/* Divisão do Meio */}
-                <div className={styles.aboutCenter}>
-                    <h1 className={styles.nameCenter}>Construindo</h1>
-                    <RotatingText
-                        texts={['Ideias', 'Soluções', 'Projetos', 'Aplicações']}
-                        mainClassName={styles.rotatingTextMain}
-                        staggerFrom="last"
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        exit={{ y: "-120%" }}
-                        staggerDuration={0.025}
-                        splitLevelClassName={styles.rotatingTextSplit}
-                        elementLevelClassName={styles.rotatingTextElement}
-                        transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                        rotationInterval={2000}
-                        splitBy="characters"
-                        auto
-                        loop
-                    />
-                </div>
 
-                {/* Divisão Direita */}
-                <div className={styles.aboutRight}>
+                <BoardItem x={50} y={50} z={3}>
+                    <div className={styles.aboutCenter}>
+                        <h1 className={styles.nameCenter}>Construindo</h1>
+                        <RotatingText
+                            texts={['Ideias', 'Soluções', 'Projetos', 'Aplicações']}
+                            mainClassName={styles.rotatingTextMain}
+                            staggerFrom="last"
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "-120%" }}
+                            staggerDuration={0.025}
+                            splitLevelClassName={styles.rotatingTextSplit}
+                            elementLevelClassName={styles.rotatingTextElement}
+                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                            rotationInterval={2000}
+                            splitBy="characters"
+                            auto
+                            loop
+                        />
+                    </div>
+                </BoardItem>
 
+
+                <BoardItem x={70} y={28} rotate={4} z={2}>
                     <FolderFloat
                         items={socialItems}
                         label="Redes sociais"
@@ -140,7 +145,21 @@ export default function About() {
                         stagger={45}
                         bounce={0.3}
                     />
-                </div>
+                </BoardItem>
+
+
+                <BoardItem x={75} y={75} rotate={0} z={1}>
+                    <MacTerminal />
+                </BoardItem>
+
+                <BoardItem x={22} y={70} rotate={0} z={1}>
+                    <LottieAnimation
+                        src="/lotties/Flow 1.json"
+                        width={280}
+                        height={280}
+                    />
+                </BoardItem>
+
             </div>
         </section>
     );

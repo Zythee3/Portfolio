@@ -9,4 +9,5 @@
   background-size: 56px 56px, 56px 56px, 100% 100%;
   position: relative;
   color: #1c1917;
+  overflow-x: clip;
 }

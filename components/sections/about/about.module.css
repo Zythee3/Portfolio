@@ -14,16 +14,32 @@
   align-items: center;
   padding: 4rem 2rem;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
-.nameCenter{
+.board {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ou min-height: 800px */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.centerTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+.nameCenter {
   font-size: 4rem;
   font-weight: 800;
   color: var(--foreground-color);
   letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin-bottom: 1.5rem;
+  line-height: 1;
+  margin: 0;
 }
+
 
 .aboutContainer {
   width: 100%;
@@ -50,6 +66,8 @@
   justify-content: center;
   text-align: center;
 }
+
+
 
 .rotatingTextMain {
   display: inline-flex;

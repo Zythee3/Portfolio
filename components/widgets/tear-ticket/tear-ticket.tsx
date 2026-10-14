@@ -395,7 +395,16 @@ const TearTicket: React.FC<TearTicketProps> = ({
 
   const finish = () => {
     const c = cfg.current;
-    if (stubRef.current) stubRef.current.style.visibility = 'hidden';
+    const s = sim.current;
+    s.sx = 0;
+    s.sy = 0;
+    s.vx = 0;
+    s.vy = 0;
+    if (stubRef.current) {
+      stubRef.current.style.visibility = 'hidden';
+      stubRef.current.style.display = 'none';
+      stubRef.current.style.transform = 'none';
+    }
     if (!c.controlled) setInner(true);
     c.onTear?.();
   };
@@ -510,14 +519,22 @@ const TearTicket: React.FC<TearTicketProps> = ({
     s.snapped = [];
     s.snapAt = [];
     s.span = [];
-    if (stubRef.current) stubRef.current.style.visibility = '';
+    if (stubRef.current) {
+      stubRef.current.style.visibility = '';
+      stubRef.current.style.display = '';
+      stubRef.current.style.transform = '';
+    }
     paint(performance.now());
   };
 
   useEffect(() => {
     if (used) {
       const s = sim.current;
-      if (s.phase === 'idle' && stubRef.current) stubRef.current.style.visibility = 'hidden';
+      if (s.phase === 'idle' && stubRef.current) {
+        stubRef.current.style.visibility = 'hidden';
+        stubRef.current.style.display = 'none';
+        stubRef.current.style.transform = 'none';
+      }
       return;
     }
     setInstant(false);

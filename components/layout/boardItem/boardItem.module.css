@@ -1,0 +1,7 @@
+/* BoardItem.module.css */
+.item {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%) rotate(var(--r));
+}
