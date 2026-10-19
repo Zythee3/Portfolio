@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReact, type DotLottieReactProps } from '@lottiefiles/dotlottie-react';
 
 interface LottieAnimationProps {
   src?: string;
-  data?: object | string;
+  data?: DotLottieReactProps['data'];
   loop?: boolean;
   autoplay?: boolean;
   width?: number | string;

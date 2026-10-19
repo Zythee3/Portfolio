@@ -55,8 +55,22 @@
   line-height: 1.6;
 }
 
-.circularTextWrapper {
+.bottomRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   margin-top: 1.5rem;
+}
+
+.lottieWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circularTextWrapper {
+  display: flex;
+  align-items: center;
 }
 
 .heroCircularText {
@@ -82,6 +96,13 @@
 
   .nameHome {
     font-size: 3rem;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .circularTextWrapper {

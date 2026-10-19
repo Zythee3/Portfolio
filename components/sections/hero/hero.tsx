@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import CircularText from '@/components/ui/circular-text/circular-text';
 import SplitText from '@/components/ui/split-text/split-text';
+import LottieAnimation from '@/components/widgets/lottie/lottie';
 import styles from './hero.module.css';
 
 // Carrega o Lanyard apenas no navegador (sem SSR)
@@ -56,13 +57,23 @@ export default function Hero() {
             textAlign="left"
           />
 
-          <div className={styles.circularTextWrapper}>
-            <CircularText
-              text="FULL STACK • DEV •"
-              onHover="pause"
-              spinDuration={20}
-              className={styles.heroCircularText}
-            />
+          <div className={styles.bottomRow}>
+            <div className={styles.circularTextWrapper}>
+              <CircularText
+                text="FULL STACK • DEV •"
+                onHover="pause"
+                spinDuration={20}
+                className={styles.heroCircularText}
+              />
+            </div>
+
+            <div className={styles.lottieWrapper}>
+              <LottieAnimation
+                src="/lotties/Flow_2.json"
+                width={150}
+                height={210}
+              />
+            </div>
           </div>
         </div>
       </div>
